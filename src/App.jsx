@@ -93,6 +93,7 @@ function App() {
   const [filter, setFilter] = useState('');
   const [filteredCatalog, setFilteredCatalog] = useState(TEST_CATALOG);
   const [openShopCart, setOpenShopCart] = useState(false);
+  const [contact, setContact] = useState('');
 
   useEffect(() => {
 
@@ -132,6 +133,10 @@ function App() {
     setOpenShopCart(!openShopCart);
   }
 
+  const setContactHandler = (event) => {
+    setContact(event.target.value)
+  }
+
 
 
   const renderOpenShopCart = () => {
@@ -144,6 +149,8 @@ function App() {
         <ShoppingCart
           addItemToCartHandler={addItemToCartHandler}
           removeItemFromCartHandler={removeItemFromCartHandler}
+          setContactHandler={setContactHandler}
+          contact={contact}
           shoppingCart={shoppingCart} />
       </Grid>
     );
