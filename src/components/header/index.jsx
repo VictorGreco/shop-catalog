@@ -8,6 +8,8 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Badge from '@mui/material/Badge';
+
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -51,7 +53,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function Header({ setFilter }) {
+export default function Header({ setFilter, shoppingCart, toggleOpenShopCartHandler }) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -62,8 +64,11 @@ export default function Header({ setFilter }) {
             color="inherit"
             aria-label="open drawer"
             sx={{ mr: 2 }}
+            onClick={() => toggleOpenShopCartHandler()}
           >
-            <ShoppingCartIcon />
+            <Badge badgeContent={shoppingCart.length} color="error">
+              <ShoppingCartIcon />
+            </Badge>
           </IconButton>
           <Typography
             variant="h6"

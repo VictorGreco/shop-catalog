@@ -5,21 +5,22 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+
+
+import AddButton from '../../common/buttons/addButton';
 
 import BasicRating from './basicRating';
 
-export default function MediaControlCard({ item, addItemToCartHandler }) {
+export default function CatalogItem({ item, addItemToCartHandler }) {
     const theme = useTheme();
 
     const { media, rating, numberOfRates, brand, subBrand, grape, color, sparkly, region, country } = item;
 
     return (
-        <Card sx={{ display: 'flex', justifyContent: 'center' }}>
+        <Card sx={{ display: 'flex', padding: '0 0 0 40px' }}>
             <CardMedia
                 component="img"
-                sx={{ width: 90 }}
+                sx={{ width: 87}}
                 image={media}
                 alt="Bottle of wine"
             />
@@ -42,11 +43,7 @@ export default function MediaControlCard({ item, addItemToCartHandler }) {
                         {color} / {sparkly}
                     </Typography>
                     <BasicRating rating={rating} votes={numberOfRates} />
-                    <Button variant="contained" startIcon={<AddShoppingCartIcon />} onClick={() => {
-                        addItemToCartHandler(item);
-                    }}>
-                        add
-                    </Button>
+                    <AddButton addHandler={addItemToCartHandler} item={item} />
                 </CardContent>
             </Box>
 
