@@ -18,7 +18,7 @@ const TEST_CATALOG = [
     color: 'White',
     sparkly: 'Flat',
     foodPairing: ['pasta', 'shelfish', 'mature and hard cheese', 'lean fish', 'cured meat'],
-    region: 'Südtirol - Alto Adige',
+    region: 'Alto Adige',
     country: 'Italy',
     description: '',
     tasteCharacteristics: ['peach', 'apple', 'apricot', 'minerals', 'honey', 'petroleum', 'tropical', 'pineaple', 'lychee'],

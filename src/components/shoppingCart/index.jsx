@@ -9,9 +9,10 @@ export default function ShoppingCart({ addItemToCartHandler, removeItemFromCartH
 
     for (let i = 0; i < prev.length; i++) {
       if (current.media === prev[i].media) {
-        prev[i].count += 1
+        prev[i].count += 1;
+
+        return prev;
       }
-      return prev;
     }
 
     prev.push({ ...current, count: 1 })
