@@ -76,7 +76,7 @@ export default function Header({ setFilter, shoppingCart, toggleOpenShopCartHand
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            Wines
+            Top Wines
           </Typography>
           <Search>
             <SearchIconWrapper>

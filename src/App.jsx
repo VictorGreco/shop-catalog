@@ -45,8 +45,47 @@ const TEST_CATALOG = [
       world: '1%',
       region: '1%'
     }
+  },
+  {
+    media: '/static/wines/mar-de-frades-ras-baixes-albario-atlntico.png',
+    rating: '4.1',
+    numberOfRates: '25644',
+    brand: 'Mar de Frades',
+    subBrand: 'Rías Baixes Albariño',
+    grape: 'Albariño',
+    color: 'White',
+    sparkly: 'Sparkly',
+    foodPairing: ['spicy food', 'sweet desserts'],
+    region: 'Rías Baixas',
+    country: 'Spain',
+    description: '',
+    tasteCharacteristics: ['citrus', 'lemon', 'lime', 'green apple', 'apple', 'pear', 'minerals', 'salt', 'saline'],
+    wineRanking: {
+      world: '1%',
+      region: '1%'
+    }
+  },
+  {
+    media: '/static/wines/view-di-romans-dessimis-pinot-griggio.png',
+    rating: '4.2',
+    numberOfRates: '5481',
+    brand: 'View de Romans',
+    subBrand: 'Dessimis Pinot Grigio',
+    grape: 'Pinot Grigio',
+    color: 'Gold',
+    sparkly: 'Flat',
+    foodPairing: ['spicy food', 'sweet desserts'],
+    region: 'Friuli',
+    country: 'Italy',
+    description: '',
+    tasteCharacteristics: ['peach', 'pear', 'apricot', 'orange', 'citrus', 'grapefruit', 'oak', 'butter', 'vanilla'],
+    wineRanking: {
+      world: '1%',
+      region: '1%'
+    }
   }
 ]
+
 
 function App() {
   const [shoppingCart, setShoppingCart] = useState([]);
